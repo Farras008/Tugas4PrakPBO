@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 27, 2022 at 09:28 PM
+-- Generation Time: Apr 27, 2022 at 09:58 PM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.4.10
 
@@ -34,13 +34,6 @@ CREATE TABLE `pengguna` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `pengguna`
---
-
-INSERT INTO `pengguna` (`id`, `username`, `password`) VALUES
-('ID001', 'farras', 'aku');
-
---
 -- Indexes for dumped tables
 --
 
@@ -48,7 +41,8 @@ INSERT INTO `pengguna` (`id`, `username`, `password`) VALUES
 -- Indexes for table `pengguna`
 --
 ALTER TABLE `pengguna`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `username` (`username`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
